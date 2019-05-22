@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: coral;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+.ingredients-list {
+  list-style: square inside;
+}
+
+.directions-list {
+  list-style: circle inside;
+}
+
+.user_review > h4 {
+  font-size: 40px;
+}
+
+.user_review > p {
+  font-style: italic;
+}
+
+header > img {
+  width: 300px;
+}
+
+li > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
