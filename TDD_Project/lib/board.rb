@@ -1,15 +1,13 @@
 class Board
   attr_reader :pile1, :pile2, :pile3, :held
-  def initialize()
+  def initialize
     @pile1 = [1,2,3]
     @pile2 = [] 
     @pile3 = []
     @held = [] #currently held disc
   end
-  #pick a pile? 
-  #1
 
-  def pick_up(input) #input is pile number (1)
+  def pick_up(input)
     if input == 1
       @held << pile1.shift
     elsif input == 2
@@ -26,6 +24,21 @@ class Board
       pile2.unshift(@held.pop)
     else 
       pile3.unshift(@held.pop)
+    end
+  end
+
+  def win?
+    pile3 == [1,2,3]
+  end
+
+  # valid_move? in progress 
+  def valid_move?(input) # 1, 2, 3
+    if input == 1 && pile1.empty?
+      return false
+    elsif input == 2 && pile2.empty?
+      return false
+    elsif input == 3 && pile3.empty?
+      return false
     end
   end
 end
